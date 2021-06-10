@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="41.345" tests="5" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-06-04T07:38:51" tests="0" failures="0" time="0">
+    <properties>
+      <property name="DEVICE_ID" value="594c6b22-e113-4855-80c3-c763cc474831"/>
+    </properties>
+  </testsuite>
+  <testsuite name="Video player" timestamp="2019-06-04T07:38:51" tests="1" file="/Users/antonbilan/projects/suitest-js-api-mocha-demo/watchMeTests/forwardingRewindingVideo.test.js" failures="0" time="26.967">
+    <properties>
+      <property name="DEVICE_ID" value="594c6b22-e113-4855-80c3-c763cc474831"/>
+    </properties>
+    <testcase name="Video player should be able to forward and rewind video" time="26.967" classname="should be able to forward and rewind video">
+    </testcase>
+  </testsuite>
+  <testsuite name="Navigation on Category Pages" timestamp="2019-06-04T07:39:46" tests="1" file="/Users/antonbilan/projects/suitest-js-api-mocha-demo/watchMeTests/navigationOnCategoryPages.test.js" failures="0" time="4.664">
+    <properties>
+      <property name="DEVICE_ID" value="594c6b22-e113-4855-80c3-c763cc474831"/>
+    </properties>
+    <testcase name="Navigation on Category Pages should work as expected" time="4.664" classname="should work as expected">
+    </testcase>
+  </testsuite>
+  <testsuite name="Image gallery" timestamp="2019-06-04T07:40:02" tests="1" file="/Users/antonbilan/projects/suitest-js-api-mocha-demo/watchMeTests/openImageInGallary.test.js" failures="0" time="2.364">
+    <properties>
+      <property name="DEVICE_ID" value="594c6b22-e113-4855-80c3-c763cc474831"/>
+    </properties>
+    <testcase name="Image gallery should open correct image" time="2.364" classname="should open correct image">
+    </testcase>
+  </testsuite>
+  <testsuite name="Back navigation" timestamp="2019-06-04T07:40:15" tests="1" file="/Users/antonbilan/projects/suitest-js-api-mocha-demo/watchMeTests/returningToHomepage.test.js" failures="1" time="4.988">
+    <properties>
+      <property name="DEVICE_ID" value="594c6b22-e113-4855-80c3-c763cc474831"/>
+    </properties>
+    <testcase name="Back navigation should navigate to &quot;Homepage&quot; after &quot;Back&quot; button press" time="4.988" classname="should navigate to &quot;Homepage&quot; after &quot;Back&quot; button press">
+      <failure message="Element &quot;image (candies) focused&quot; was not found." type="AssertionError [ERR_ASSERTION]"><![CDATA[Error
+    at snapshotElement (watchMeTests/utils.js:36:4)
+    at Context.it (watchMeTests/returningToHomepage.test.js:27:9)
+    at process._tickCallback (internal/process/next_tick.js:68:7)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Basic functionality" timestamp="2019-06-04T07:40:33" tests="1" file="/Users/antonbilan/projects/suitest-js-api-mocha-demo/watchMeTests/welcomeToSuitest.test.js" failures="0" time="2.362">
+    <properties>
+      <property name="DEVICE_ID" value="594c6b22-e113-4855-80c3-c763cc474831"/>
+    </properties>
+    <testcase name="Basic functionality should work correctly" time="2.362" classname="should work correctly">
+    </testcase>
+  </testsuite>
+</testsuites>

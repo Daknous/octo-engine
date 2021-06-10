@@ -1,0 +1,11 @@
+<testsuite name="DEVICE_ID-594c6b22-e113-4855-80c3-c763cc474831" tests="5" failures="0" errors="1" skipped="0" timestamp="Tue, 04 Jun 2019 07:53:42 GMT" time="113.511">
+<testcase classname="Video player" name="should be able to forward and rewind video" time="31.769"/>
+<testcase classname="Navigation on Category Pages" name="should work as expected" time="3.668"/>
+<testcase classname="Image gallery" name="should open correct image" time="2.204"/>
+<testcase classname="Back navigation" name="should navigate to &#x22;Homepage&#x22; after &#x22;Back&#x22; button press" time="4.996"><failure>Element &#x22;image (candies) focused&#x22; was not found.
+Error
+    at snapshotElement (watchMeTests/utils.js:36:4)
+    at Context.it (watchMeTests/returningToHomepage.test.js:27:9)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure></testcase>
+<testcase classname="Basic functionality" name="should work correctly" time="2.06"/>
+</testsuite>

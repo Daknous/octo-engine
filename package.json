@@ -1,0 +1,37 @@
+{
+  "name": "suitest-js-api-mocha-demo",
+  "version": "1.0.0",
+  "description": "Demo set up for Suitest JS API",
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "mocha": "^6.1.4",
+    "mocha-junit-reporter": "^1.22.0",
+    "suitest-js-api": "^1.16.11"
+  },
+  "scripts": {
+    "zap": "suitest interactive mocha --log-dir=e2e mocha --no-timeouts --exit \"./test/zap.test.js\"",
+    "zapreport": "suitest interctive --log-dir=e2e mocha --reporter mochawesome --reporter-options reportTitle=DEVICE_ID-%SUITEST_CHILD_PROCESS:~0,36%,reportFilename=%SUITEST_CHILD_PROCESS:~0,36%,reportDir=/reports/html,autoOpen=true  --no-timeouts --exit \"./test/*dummy.test.js\"",
+    "interactive": "suitest interactive mocha --reporter mocha-junit-reporter --no-timeouts --exit \"./test/dummy.test.js\"",
+    "interactive:logs": "suitest interactive --log-dir=e2e mocha --no-timeouts --exit \"./test/dummy.test.js\"",
+    "interactive:debug": "suitest interactive --inspect-brk=9121 node ./node_modules/mocha/bin/_mocha --no-timeouts --exit \"./test/debug.test.js\"",
+    "interactive:repl": "suitest interactive mocha --no-timeouts --exit \"./test/repl.test.js\"",
+    "automated": "suitest automated mocha --no-timeouts --exit \"./test/dummy.test.js\"",
+    "automated:logs": "suitest automated --log-dir=e2e mocha --no-timeouts --exit \"./test/dummy.test.js\"",
+    "interactive:watchMe": "suitest interactive mocha --reporter mocha-junit-reporter --reporter-options outputs=true --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:watchMe": "suitest automated mocha --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:watchMe:junit": "suitest automated --log-dir=e2e PROPERTIES=DEVICE_ID:'\"${SUITEST_CHILD_PROCESS%%|*}\"' mocha --reporter mocha-junit-reporter --reporter-options outputs=true,toConsole=true,mochaFile=./reports/junit/'\"${SUITEST_CHILD_PROCESS%%|*}\"'.xml --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:watchMe:junit:win": "suitest automated --log-dir=e2e cross-env PROPERTIES=DEVICE_ID:\"%SUITEST_CHILD_PROCESS:~0,36%\" mocha --reporter mocha-junit-reporter --reporter-options outputs=true,toConsole=true,mochaFile=\"./reports/junit/%SUITEST_CHILD_PROCESS:~0,36%.xml\" --no-timeouts --exit \"./watchMeTests/*.test.js",
+    "automated:watchMe:xunit": "suitest automated --log-dir=e2e mocha --reporter xunit --reporter-options output=./reports/xunit/'\"${SUITEST_CHILD_PROCESS%%|*}\"'.xml,suiteName=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"' --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:watchMe:xunit:win": "suitest automated --log-dir=e2e mocha --reporter xunit --reporter-options output=./reports/xunit/%SUITEST_CHILD_PROCESS:~0,36%.xml,suiteName=DEVICE_ID-%SUITEST_CHILD_PROCESS:~0,36% --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:watchMe:tap": "suitest automated --log-dir=e2e mocha --reporter tap  --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:watchMe:mochawesome": "suitest automated --log-dir=e2e mocha --reporter mochawesome --reporter-options reportTitle=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"',reportFilename='\"${SUITEST_CHILD_PROCESS%%|*}\"',reportDir='./reports/html',autoOpen=true  --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:watchMe:mochawesome:win": "suitest automated --log-dir=e2e mocha --reporter mochawesome --reporter-options reportTitle=DEVICE_ID-%SUITEST_CHILD_PROCESS:~0,36%,reportFilename=%SUITEST_CHILD_PROCESS:~0,36%,reportDir=/reports/html,autoOpen=true  --no-timeouts --exit \"./watchMeTests/*.test.js\"",
+    "automated:slack-reporter": "suitest automated  mocha --reporter mocha-ci-slack-reporter --reporter-options username=username,url=slack_incoming_webhooks_url,channel=#mocha-reports,testTitle=DEVICE_ID-'\"${SUITEST_CHILD_PROCESS%%|*}\"' --no-timeouts --exit \"./test/dummy.test.js\"",
+    "automated:slack-reporter:win": "suitest automated  mocha --reporter mocha-ci-slack-reporter --reporter-options username=username,url=slack_incoming_webhooks_url,channel=#mocha-reports,testTitle=DEVICE_ID-%SUITEST_CHILD_PROCESS:~0,36% --no-timeouts --exit \"./test/dummy.test.js\""
+  },
+  "devDependencies": {
+    "mocha-ci-slack-reporter": "^1.0.1",
+    "mochawesome": "^6.2.2",
+    "xunit-viewer": "^7.1.3"
+  }
+}
