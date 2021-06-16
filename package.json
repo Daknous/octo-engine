@@ -6,7 +6,7 @@
     "cross-env": "^5.2.0",
     "mocha": "^6.1.4",
     "mocha-junit-reporter": "^1.22.0",
-    "suitest-js-api": "^1.16.11"
+    "suitest-js-api": "^2.4.0"
   },
   "scripts": {
     "zap": "suitest interactive mocha --log-dir=e2e mocha --no-timeouts --exit \"./test/zap.test.js\"",
@@ -22,5 +22,17 @@
     "mocha-ci-slack-reporter": "^1.0.1",
     "mochawesome": "^6.2.2",
     "xunit-viewer": "^7.1.3"
-  }
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": "git+https://github.com/Daknous/octo-engine.git",
+  "keywords": [],
+  "author": "seif.dDaknous <seif.daknou@zattoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daknous/octo-engine/issues"
+  },
+  "homepage": "https://github.com/Daknous/octo-engine#readme"
 }
