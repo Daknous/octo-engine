@@ -19,7 +19,7 @@ pipeline {
      
     stage('Test') {
       steps {
-         bat 'npm run'
+         bat 'npm run zap'
       }
     }      
   }
