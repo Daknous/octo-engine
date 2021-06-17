@@ -14,7 +14,7 @@ pipeline {
     stage('Install dependencies') {
       steps {      
         bat 'npm install'
-        bat 'npm audit fix'
+        bat 'npm audit fix --force'
         bat 'npm view suitest-js-api' 
       }
     }
