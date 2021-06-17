@@ -15,7 +15,7 @@ pipeline {
       steps {      
         bat 'npm init -y'      
         bat 'npm i suitest-js-api'
-        bat 'audit fix'
+        bat 'npm audit fix'
         bat 'npm view suitest-js-api'
         bat 'npm install'
       }
