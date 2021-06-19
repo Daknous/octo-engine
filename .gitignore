@@ -61,7 +61,7 @@ demo/testConfig.js
 .DS_Store
 
 # suitestrc
-#.suitestrc
+.suitestrc
 
 # watchMeTests
 watchMeTests/
