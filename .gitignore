@@ -63,6 +63,15 @@ demo/testConfig.js
 # suitestrc
 .suitestrc
 
+# e2e
+e2e/
+
+# vsc
+vscode/
+
+# report gen.
+reports/
+
 # watchMeTests
 watchMeTests/
 
