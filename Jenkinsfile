@@ -26,7 +26,7 @@ pipeline {
      
     stage('Test') {
         when {
-                // Only run if a "Zattoo CH" is selected
+                // Only run if "Zattoo CH" is selected
                 expression { params.Partner == 'Zattoo CH' }
             }
       steps {
@@ -35,7 +35,7 @@ pipeline {
     }
     stage('Test 1&1') {
         when {
-                // Only run if a "1&1" is selected
+                // Only run if "1&1" is selected
                 expression { params.Partner == '1&1' }
             }
       steps {
