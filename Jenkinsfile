@@ -17,10 +17,10 @@ pipeline {
         
     stage('Install dependencies') {
       steps {      
-        bat 'npm init -y'      
-        bat 'npm i suitest-js-api'
-        bat 'npm audit'
-        bat 'npm view suitest-js-api'
+        sh 'npm init -y'      
+        sh 'npm i suitest-js-api'
+        sh 'npm audit'
+        sh 'npm view suitest-js-api'
       }
     }
      
