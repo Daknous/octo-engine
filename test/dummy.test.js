@@ -14,10 +14,6 @@ describe('My super cool test', () => {
 		// Assert location
 		await suitest.assert.location().equals('com.zattoo.tv.TvActivity');
 
-
-		// Assert cookie
-		// await assert.cookie('name').doesNot().exist();
-		// await suitest.assert.element('SubtitleView (1)').exists();
 		// await suitest.assert.element('ChannelNumber').exists();
 		await suitest.assert.element('ChannelNumber').matches([
 			{
