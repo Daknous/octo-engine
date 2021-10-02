@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="12.0910" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2021-05-24T14:52:22" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="20.0110" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-09-08T20:08:13" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="My super cool test" timestamp="2021-05-24T14:52:22" tests="1" file="/workspaces/seif/js-api-mocha/suitest-js-api-mocha-demo/test/dummy.test.js" time="12.0910" failures="0">
-    <testcase name="My super cool test should pass" time="12.0910" classname="should pass">
+  <testsuite name="My super cool test" timestamp="2021-09-08T20:08:13" tests="1" file="/workspaces/MVP/test/dummy.test.js" time="20.0110" failures="0">
+    <testcase name="My super cool test should pass" time="20.0110" classname="should pass">
     </testcase>
   </testsuite>
 </testsuites>

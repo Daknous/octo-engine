@@ -72,5 +72,5 @@ vscode/
 # report gen.
 reports/
 
-# watchMeTests
-watchMeTests/
+# .devcontainer file
+.devcontainer/

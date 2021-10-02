@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-09-21T22:25:04.582Z",
+    "end": "2021-09-21T22:26:22.647Z",
+    "duration": 78065,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b274a66-b1be-431c-9de3-658761aac569",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "61dbd6e5-ad3f-4fae-86cf-3d4745ee1a83",
+          "title": "Live show metadata matches ZAPI",
+          "fullFile": "/workspaces/MVP/test/dummy.test.js",
+          "file": "/test/dummy.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "Live show metadata matches ZAPI \"before all\" hook",
+              "timedOut": false,
+              "duration": 890,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Start test\n//const settings = fs.readFileSync('./config/suitest.json');\n\nawait suitest.startTest('');",
+              "err": {},
+              "uuid": "5edc7adc-7550-4bd5-ad4d-054a97e7f86e",
+              "parentUUID": "61dbd6e5-ad3f-4fae-86cf-3d4745ee1a83",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook",
+              "fullTitle": "Live show metadata matches ZAPI \"after all\" hook",
+              "timedOut": false,
+              "duration": 63,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// End test\nawait suitest.endTest();",
+              "err": {},
+              "uuid": "65baec70-ae8e-4b0f-b285-b0308aea47eb",
+              "parentUUID": "61dbd6e5-ad3f-4fae-86cf-3d4745ee1a83",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "OSD: Channel name and show name match ZAPI response ",
+              "fullTitle": "Live show metadata matches ZAPI OSD: Channel name and show name match ZAPI response ",
+              "timedOut": false,
+              "duration": 36098,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Open app\nawait assert.openApp();\nawait snippetHomepageOpened();\n// Assert location\nawait suitest.assert.location().equals('com.zattoo.tv.TvActivity');\n//var val = fs.readFileSync('./config/suitest.json');\n// await suitest.assert.element('ChannelNumber').exists();\nawait suitest.assert.element('ChannelNumber').matches([\n\t{\n\t\tname: suitest.PROP.TEXT_CONTENT,\n\t\tval: '001',\n\t},\n\tsuitest.PROP.WIDTH,\n]).timeout(10000);\n\t\n//Assert show name matches ZAPI response\nawait assert.element({\n\txpath: '//TvPlayerView//BigscreenVideoControllerView/OsdView/ConstraintLayout/AppCompatTextView[@id=\"showTitleView\"]',         ////TvPlayerView//BigscreenVideoControllerView/OsdView/ConstraintLayout/AppCompatTextView[@id=\"showTitleView\"]\n\tindex: 1,\n}).matches([\n\t{\n\t\tname: suitest.PROP.TEXT_CONTENT,\n\t\tval: settings.interactive[0].showName,\n\t},\n]).timeout(20000);\n// Assert Next show name matches ZAPI response\nawait assert.element({\n\txpath: '//LinearLayout[3]/AppCompatTextView[@id=\"showName\"]',         ////TvPlayerView//BigscreenVideoControllerView/OsdView/ConstraintLayout/AppCompatTextView[@id=\"showTitleView\"]\n\tindex: 1,\n}).matches([\n\t{\n\t\tname: suitest.PROP.TEXT_CONTENT,\n\t\tval: settings.interactive[0].nextshowName,\n\t},\n]).timeout(20000);\n\n// Test if element channel name maches ZAPI response\n// https://suite.st/docs/suitest-api/assertions-test-subjects/#element\nawait assert.press(VRC.RIGHT)\n\t\nawait assert.element({\n\txpath: '//LinearLayout[1]/ConstraintLayout/AppCompatTextView[@id=\"channelName\"]',         ////TvPlayerView//BigscreenVideoControllerView/OsdView/ConstraintLayout/AppCompatTextView[@id=\"showTitleView\"]\n\tindex: 1,\n}).matches([\n\t{\n\t\tname: suitest.PROP.TEXT_CONTENT,\n\t\tval: settings.interactive[0].channelName,\n\t},\n]).timeout(20000);",
+              "err": {
+                "message": "AssertionError: ✖ Assert: //TvPlayerView//BigscreenVideoControllerView/OsdView/ConstraintLayout/AppCompatTextView[@id=\"showTitleView\"] timeout 20s\n  ✖ text = Loose Women                 \n         → Fred and Rose West: Reopened\n  fail: Condition was not met",
+                "estack": "Error\n    at Context.<anonymous> (test/dummy.test.js:43:6)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": null
+              },
+              "uuid": "a382fbbd-99bc-4fe7-a0f8-be367d782380",
+              "parentUUID": "61dbd6e5-ad3f-4fae-86cf-3d4745ee1a83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Channel List: channel name and show name match ZAPI response",
+              "fullTitle": "Live show metadata matches ZAPI Channel List: channel name and show name match ZAPI response",
+              "timedOut": false,
+              "duration": 40998,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Open app\nawait assert.openApp();\n// Assert location\nawait suitest.assert.location().equals('com.zattoo.tv.TvActivity');\n// Test if element exist\n// https://suite.st/docs/suitest-api/assertions-test-subjects/#element\nawait assert.press(VRC.RIGHT).until(\n\tsuitest.element('Channel_list').matches([\n\t\tPROP.ALPHA,\n\t\tPROP.BG_COLOR,\n\t\tPROP.HAS_FOCUS,\n\t\tPROP.HEIGHT,\n\t\tPROP.ID,\n\t\tPROP.IS_CHECKED,\n\t\tPROP.IS_CLICKABLE,\n\t\tPROP.IS_COMPLETELY_DISPLAYED,\n\t\tPROP.IS_ENABLED,\n\t\tPROP.IS_FOCUSABLE,\n\t\tPROP.IS_SELECTED,\n\t\tPROP.IS_TOUCHABLE,\n\t\tPROP.LEFT,\n\t\tPROP.PACKAGE_NAME,\n\t\tPROP.PIVOT_X,\n\t\tPROP.PIVOT_Y,\n\t\tPROP.SCALE_X,\n\t\tPROP.SCALE_Y,\n\t\tPROP.TOP,\n\t\tPROP.TRANSLATION_X,\n\t\tPROP.TRANSLATION_Y,\n\t\tPROP.VISIBILITY,\n\t\tPROP.WIDTH,\n\t])\n).repeat(3).interval(5000);\n\t\nawait assert.element({\n\txpath: '//LinearLayout[1]/ConstraintLayout/AppCompatTextView[@id=\"programTitle\"]',\n\tindex: 1,\n}).matches([\n\t{\n\t\tname: suitest.PROP.TEXT_CONTENT,\n\t\tval: settings.interactive[0].showName,\n\t},\n]).timeout(20000);",
+              "err": {
+                "message": "AssertionError: ✖ Assert: //LinearLayout[1]/ConstraintLayout/AppCompatTextView[@id=\"programTitle\"] timeout 20s\n  fail: Subject does not exist",
+                "estack": "Error\n    at Context.<anonymous> (test/dummy.test.js:121:6)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": null
+              },
+              "uuid": "a978311e-720f-45b0-8664-d92a05b88fcc",
+              "parentUUID": "61dbd6e5-ad3f-4fae-86cf-3d4745ee1a83",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a382fbbd-99bc-4fe7-a0f8-be367d782380",
+            "a978311e-720f-45b0-8664-d92a05b88fcc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 77096,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

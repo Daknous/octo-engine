@@ -1,0 +1,61 @@
+{
+    "interactive": {
+        "id": "suitest-id-for-testing",
+        "pw": "password-for-suitest-id"
+    },
+    "automated": {
+        "id": "suitest-token-id",
+        "pw": "password-for-suitest-token-id"
+    },
+    "testrail": {
+        "host": "testrail-api-url",
+        "id": "your-testrail-account",
+        "pw": "your-testrail-password-please-make-api-token",
+        "project": "10",
+        "suite": "1864"
+    },
+    "testpacks": {
+        "default": "suitest-testpack-number",
+        "give-a-name-you-like": "suitest-testpack-number",
+        "give-another-name-you-like": "suitest-testpack-number",
+        "you-can-make-more-names": "suitest-testpack-number"
+    },
+    "apps": {
+        "default": "suitest-app-id",
+        "main": "suitest-app-id"
+    },
+    "versions": {
+        "default": "suitest-app-version-id",
+        "main": "suitest-app-version-id"
+    },
+    "targets": {
+        "default": "suitest-app-configuration-id",
+        "give-a-name-you-like": "suitest-app-configuration-id",
+        "give-another-name-you-like": "suitest-app-configuration-id",
+        "you-can-make-more-names": "suitest-app-configuration-id"
+    },
+    "devices": {
+        "default": "suitest-device-id",
+        "give-a-name-you-like": "suitest-device-id",
+        "give-another-name-you-like": "suitest-device-id",
+        "you-can-make-more-names": "suitest-device-id"
+    },
+    "users": {
+        "default": {
+            "id": "real-zattoo-id",
+            "pw": "real-zattoo-password"
+        },
+        "give-a-name-you-like": {
+            "id": "real-zattoo-id",
+            "pw": "real-zattoo-password"
+        },
+        "give-another-name-you-like": {
+            "id": "real-zattoo-id",
+            "pw": "real-zattoo-password"
+        },
+        "you-can-make-more-names": {
+            "id": "real-zattoo-id",
+            "pw": "real-zattoo-password"
+        }
+    }
+}

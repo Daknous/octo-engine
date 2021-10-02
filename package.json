@@ -3,24 +3,31 @@
   "version": "1.0.0",
   "description": "Suitest JS API",
   "dependencies": {
+    "axios": "^0.21.1",
     "cross-env": "^5.2.0",
+    "form-data": "^4.0.0",
     "mocha": "^6.1.4",
     "mocha-junit-reporter": "^1.22.0",
     "suitest-js-api": "^2.4.0"
   },
   "scripts": {
     "zap": "suitest interactive mocha --log-dir=e2e mocha --no-timeouts --exit \"./test/zap.test.js\"",
-    "zapreport": "suitest interctive --log-dir=e2e mocha --reporter mochawesome --reporter-options reportTitle=DEVICE_ID-%SUITEST_CHILD_PROCESS:~0,36%,reportFilename=%SUITEST_CHILD_PROCESS:~0,36%,reportDir=/reports/html,autoOpen=true  --no-timeouts --exit \"./test/*dummy.test.js\"",
+    "zapreport": "suitest interctive --reporter mochawesome --no-timeouts --exit \"./test/dummy.test.js\"",
     "interactive": "suitest interactive mocha --reporter mocha-junit-reporter --no-timeouts --exit \"./test/dummy.test.js\"",
     "interactive:logs": "suitest interactive --log-dir=e2e mocha --no-timeouts --exit \"./test/dummy.test.js\"",
     "interactive:debug": "suitest interactive --inspect-brk=9121 node ./node_modules/mocha/bin/_mocha --no-timeouts --exit \"./test/debug.test.js\"",
     "interactive:repl": "suitest interactive mocha --no-timeouts --exit \"./test/repl.test.js\"",
     "automated": "suitest automated mocha --no-timeouts --exit \"./test/dummy.test.js\"",
-    "automated:logs": "suitest automated --log-dir=e2e mocha --no-timeouts --exit \"./test/dummy.test.js\""
+    "automated:logs": "suitest automated --log-dir=e2e mocha --no-timeouts --exit \"./test/dummy.test.js\"",
+    "dev": "suitest interactive --no-timeouts --exit \"./test/bdd.test.js\"",
+    "dev:test": "suitest interactive mocha --log-dir=e2e mocha --no-timeouts --exit \"./test/bdd.test.js\"",
+    "zapi:axios": "node \"./scripts/axios.js\"",
+    "smoke": "suitest interactive --log-dir=e2e mocha --reporter mochawesome --no-timeouts --exit \"./test/*smoke.test.js\""
   },
   "devDependencies": {
     "mocha-ci-slack-reporter": "^1.0.1",
     "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
     "xunit-viewer": "^7.1.3"
   },
   "main": "index.js",
@@ -29,7 +36,7 @@
   },
   "repository": "git+https://github.com/Daknous/octo-engine.git",
   "keywords": [],
-  "author": "seif.dDaknous <seif.daknou@zattoo.com>",
+  "author": "Seif Daknou <seif.daknou@zattoo.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Daknous/octo-engine/issues"
