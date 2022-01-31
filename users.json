@@ -1,1 +1,9 @@
-{"firstChannelMetadata":[{"channelName":"ITV 1 HD","showName":"Paul O'Grady's Saturday Night Line Up","nextshowName":"ITV News"}]}
+{
+    "firstChannelMetadata": [
+        {
+            "channelName": "ITV 1 HD",
+            "showName": "Sturm der Liebe",
+            "nextshowName": "Meteo-Spätausgabe"
+        }
+    ]
+}

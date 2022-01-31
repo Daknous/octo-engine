@@ -11,9 +11,9 @@ describe('Test your test', () => {
 	// Run before every test 
 	before(async() => {
 	// Start test
-	await suitest.startTest('');
-    await startApp();
-    await checkOSDMetaData();
+	await suitest.openApp();
+	//await startApp();
+    //await checkOSDMetaData();
 		
 	});
 
@@ -36,6 +36,5 @@ describe('Test your test', () => {
 	
 	after(async() => {
 		// End test
-		await suitest.endTest();
 	});
 });

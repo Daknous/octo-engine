@@ -2,10 +2,24 @@
   "username": "naqa2@zattoo.com",
   "password": "FDHC]b%W1Z2S",
   "orgId": "d40e8d24-806c-4638-a079-0af058ddfb28",
-  "deviceId": "581a30f9-81d0-4676-8bc8-f15f941f4c98",
-  "appConfigId": "7ab969a7-aba9-4890-9c36-551f54c0f326",
-
-  "tokenKey": "297RVk5zd4",
-  "tokenPassword": "e43a40e61dee8a7ed90c55856588c447a1f8d65622c18d4ec91bb8a3df417f6c",
-  "testPackId": 14257
-}
+  "appConfigId": "04ab9b9b-4184-461d-b089-9b1b75016a53",
+  "tokenId": "1ngAjnxAZy",
+  "tokenPassword": "e856ec4c70a8b4a8bbdf5ced3ac2bbe1c8df737c8157592e5edcb245c0bb7a99",
+  "testPackId": 14257,
+  "logDir": "/workspaces/MVP/e2e",
+        "preset": ["1und1", "zattooch"],
+        "presets": {
+            "1und1": {
+                "device": "f054465d-2f1f-4d88-9d82-4bf7fb862ac3",
+                "config": {
+                    "configId": "04ab9b9b-4184-461d-b089-9b1b75016a53"               
+                }
+            },
+            "zattooch": {
+              "device": "0018dd04-148f-4233-8419-15ce5f7adc13",
+              "config": {
+                  "configId": "dde7e042-9eea-4a5b-a300-a77f3a8d84ad"               
+              }
+          }
+        }
+    }

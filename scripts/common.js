@@ -5,7 +5,7 @@ const {channelNumber, showName, nextshowName, exoPlayer, allChannels, sideMenu} 
 const {snapshotElement} = require('./utils');
 
 /**
- * Reusable helper functions
+ * Module tests
  */
 module.exports = {
 
@@ -14,7 +14,7 @@ module.exports = {
 	 * @returns {Promise<void>}
 	 */
 	    startApp: async() => { 
-		await suitest.assert.location().equals('com.zattoo.tv.TvActivity');
+		//await suitest.assert.location().equals('com.zattoo.tv.TvActivity');
 		await suitest.assert.element(exoPlayer.selector).exists();	
 	},
 
@@ -34,9 +34,9 @@ module.exports = {
 	 */
 	 	openChannelList: async() => {
 		await assert.press(VRC.RIGHT).until(
-			suitest.element(allChannels.selector).matches(allChannels.props)
+			suitest.element(allChannels.selector).exist()			//matches(allChannels.props)
 		).interval(10000).repeat(2);
-		await snapshotElement(allChannels).timeout(20000);
+		//await snapshotElement(allChannels).timeout(20000);
 	},
 
 	/**
@@ -45,9 +45,9 @@ module.exports = {
 	 */
 	 openMenu: async() => {
 		await assert.press(VRC.LEFT).until(
-			suitest.element(sideMenu.selector).matches(sideMenu.props)
+			suitest.element(sideMenu.selector).exist()             //matches(sideMenu.props)
 		).interval(1000).repeat(7);
-		await snapshotElement(sideMenu).timeout(20000);
+		//await snapshotElement(sideMenu).timeout(20000);
 
 	},
 

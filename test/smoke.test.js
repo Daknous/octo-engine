@@ -9,7 +9,7 @@ describe('Smoke Test', () => {
 	//beforeEach hook runs before each describe 
 	beforeEach(async() => {
 		// Start test
-		await suitest.startTest('');
+		//await suitest.startTest('');
 		await suitest.openApp();
 		
 	});
@@ -54,6 +54,6 @@ describe('Smoke Test', () => {
 	//after hook runs once after last describe 
 	after(async() => {
 		// End test
-		await suitest.endTest();
+		//await suitest.endTest();
 	});
 });

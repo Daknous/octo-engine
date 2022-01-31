@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="20.0110" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2021-09-08T20:08:13" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="0.0180" tests="1" failures="2">
+  <testsuite name="Root Suite" timestamp="2021-12-21T11:11:27" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="My super cool test" timestamp="2021-09-08T20:08:13" tests="1" file="/workspaces/MVP/test/dummy.test.js" time="20.0110" failures="0">
-    <testcase name="My super cool test should pass" time="20.0110" classname="should pass">
+  <testsuite name="Smoke Test" timestamp="2021-12-21T11:11:27" tests="0" file="/workspaces/MVP/test/smoke.test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Player should work on app start" timestamp="2021-12-21T11:11:27" tests="1" file="/workspaces/MVP/test/smoke.test.js" time="0.0030" failures="2">
+    <testcase name="Smoke Test &quot;before each&quot; hook for &quot;should check App is opened and player is working&quot;" time="0.0000" classname="&quot;before each&quot; hook for &quot;should check App is opened and player is working&quot;">
+      <failure message="suitest.startTest is not a function" type="TypeError"><![CDATA[TypeError: suitest.startTest is not a function
+    at Context.<anonymous> (test/smoke.test.js:12:17)
+    at processImmediate (node:internal/timers:464:21)]]></failure>
+    </testcase>
+    <testcase name="Smoke Test &quot;after all&quot; hook in &quot;Smoke Test&quot;" time="0.0000" classname="&quot;after all&quot; hook in &quot;Smoke Test&quot;">
+      <failure message="suitest.endTest is not a function" type="TypeError"><![CDATA[TypeError: suitest.endTest is not a function
+    at Context.<anonymous> (test/smoke.test.js:57:17)
+    at processImmediate (node:internal/timers:464:21)]]></failure>
     </testcase>
   </testsuite>
 </testsuites>
